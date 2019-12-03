@@ -1,6 +1,6 @@
 {
 	"name": "iphone-extract-rootcertificates",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Extract root certificates from iPhone Trust Store",
 	"repository": {
 		"type": "git",
