@@ -1,0 +1,42 @@
+{
+	"name": "iphone-extract-rootcertificates",
+	"version": "0.0.0",
+	"description": "Extract root certificates from iPhone Trust Store",
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/martinholden-skillsoft/iphone-extract-rootcertificates.git"
+	},
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node ./app.js",
+		"lint": "eslint **/*.js",
+		"preversion": "npm run lint",
+		"postversion": "git push && git push --tags && npm run changelog && git push ",
+		"postinstall": "",
+		"changelog": "rimraf CHANGELOG.md && auto-changelog --template keepachangelog && git add . && git commit . -m changelog && git push"
+	},
+	"keywords": [],
+	"author": "Martin Holden &lt;martin.holden@skillsoft.com&gt;",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^0.19.0",
+		"lodash": "^4.17.11",
+		"moment": "^2.24.0",
+		"pkginfo": "^0.4.1",
+		"promise-retry": "^1.1.1",
+		"sqlite3": "^4.1.0",
+		"winston": "^3.2.1"
+	},
+	"devDependencies": {
+		"auto-changelog": "^1.14.1",
+		"babel-eslint": "^10.0.2",
+		"eslint": "^6.0.1",
+		"eslint-config-airbnb-base": "^14.0.0",
+		"eslint-config-prettier": "^6.0.0",
+		"eslint-plugin-import": "^2.18.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"prettier": "^1.18.2",
+		"rimraf": "^3.0.0"
+	}
+}
